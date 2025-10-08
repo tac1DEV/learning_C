@@ -1,27 +1,27 @@
 #include <stdio.h>
-#include <stdbool.h>
+
+void happyBirthday(char name[], int age) {
+    printf("Happy Birthday to You!\n");
+    printf("Happy Birthday to You!\n");
+    printf("Happy Birthday Dear %s!\n", name);
+    if(age >= 30) {
+    printf("Happy Birthday to You elder!\n");
+    }else{
+    printf("Happy Birthday to You %d years old person!\n", age);
+    }
+}
 
 int main() {
 
-    float price = 10.00;
-    bool isStudent = false;
-    bool isMember = false;
+    char name[] = "";
+    int age = 0;
 
-    if(isStudent) {
-        if(isMember) {
-            printf("You get a 30%% discount!\n");
-            price *= 0.7;
-        }else{
-        printf("You get a 10%% discount!\n");
-        price *= 0.9;
-        }
-    }else{
-        if(isMember) {
-            printf("You get a 20%% discount!\n");
-            price *= 0.8;
-    }
+    printf("Enter name: ");
+    scanf("%s", &name);
+    printf("Enter your age: ");
+    scanf("%d", &age);
+    
 
-    printf("Total price: $%.2f\n", price);
-
+    happyBirthday(name, age);
     return 0;
 }
