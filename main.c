@@ -1,41 +1,40 @@
 #include <stdio.h>
-#include <string.h>
+#include <math.h>
 
 int main() {
-    // printf("Hello, World!\n");
+    
+    float x = 2.1;
 
-    // int a = 5;
-    // float b = 2.5;
-    // double pi = 3.14159265358979;
+    // x = sqrt(x);
+    // x = pow(x, 2);
+    // x = round(x);
+    //entier supérieur
+    // x = ceil(x);
+    //entier inférieur
+    // x = floor(x);
+    // x = abs(x);
+    // x = log(x);
+    // x = sin(x);
+    // x = cos(x);
+    // x = tan(x);
 
-    // printf("Hello, %d!\n", a);
-    // printf("Ce produit coute %f€!\n", b);
-    // printf("Pi vaut environ %.2f!\n", pi);
-    // printf("Pi vaut environ %.15lf!\n", pi);
+    double radius = 0.0;
+    double area = 0.0;
+    double surfaceArea = 0.0;
+    double volume = 0.0;
+    const double PI = 3.14159;
 
-    int a = 0;
-    float b=0.0f;
-    char c = '\0';
-    char d[30] = "";
 
-    //On assigne une valeur à l'emplacement mémoire de a
-    printf("Entrez un entier: ");
-    scanf("%d", &a);
-    printf("Entrez un decimal: ");
-    scanf("%f", &b);
-    printf("Entrez une lettre: ");
-    // Ajouter un espace avant %c pour eviter de capturer le caractère de nouvelle ligne
-    scanf(" %c", &c);
+    printf("Enter the radius: ");
+    scanf("%lf", &radius);
 
-    getchar(); // Pour clear le caractère de nouvelle ligne restant dans le buffer
-    printf("Entrez deux mots de (30 carac. max): ");
-    fgets(d, sizeof(d), stdin);
-    d[strlen(d) - 1] = '\0'; // Enlever le caractère de nouvelle ligne à la fin
+    area = PI * pow(radius, 2);
+    surfaceArea = 4 * PI * pow(radius, 2);
+    volume = (4.0/3.0) * PI * pow(radius, 3);
 
-    printf("%s\n", d);
-    printf("%d\n", a);
-    printf("%.2f\n", b);
-    printf("%c\n", c);
+    printf("Area: %.2lf\n", area);
+    printf("Surface Area: %.2lf\n", surfaceArea);
+    printf("Volume: %.2lf\n", volume);
 
     return 0;
 }
