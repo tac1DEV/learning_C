@@ -1,32 +1,27 @@
 #include <stdio.h>
+#include <stdbool.h>
 
 int main() {
-    
-    int dayOfWeek = 5;
 
-    switch (dayOfWeek) {
-        case 0:
-            printf("Sunday\n");
-            break;
-        case 1:
-            printf("Monday\n");
-            break;
-        case 2:
-            printf("Tuesday\n");
-            break;
-        case 3:
-            printf("Wednesday\n");
-            break;
-        case 4:
-            printf("Thursday\n");
-            break;
-        case 5:
-            printf("Friday\n");
-            break;
-        case 6:
-            printf("Saturday\n");
-            break;
-        default:
-            printf("Invalid day\n");
+    float price = 10.00;
+    bool isStudent = false;
+    bool isMember = false;
+
+    if(isStudent) {
+        if(isMember) {
+            printf("You get a 30%% discount!\n");
+            price *= 0.7;
+        }else{
+        printf("You get a 10%% discount!\n");
+        price *= 0.9;
+        }
+    }else{
+        if(isMember) {
+            printf("You get a 20%% discount!\n");
+            price *= 0.8;
     }
+
+    printf("Total price: $%.2f\n", price);
+
+    return 0;
 }
