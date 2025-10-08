@@ -2,40 +2,49 @@
 #include <string.h>
 
 int main() {
-    // printf("Hello, World!\n");
 
-    // int a = 5;
-    // float b = 2.5;
-    // double pi = 3.14159265358979;
+    char noun[20] = "";
+    char verb[50] = "";
+    char adjective1[50] = "";
+    char adjective2[50] = "";
+    char adjective3[50] = "";
+    
+    
+    printf("Enter an adjective: ");
+    //scanf n'accepte pas les espaces
+    fgets(adjective1, sizeof(adjective1), stdin);
+    //enlever le \n de la fin
+    adjective1[strlen(adjective1) - 1] = '\0';
 
-    // printf("Hello, %d!\n", a);
-    // printf("Ce produit coute %f€!\n", b);
-    // printf("Pi vaut environ %.2f!\n", pi);
-    // printf("Pi vaut environ %.15lf!\n", pi);
+    printf("Enter a noun: ");
+    //scanf n'accepte pas les espaces
+    fgets(noun, sizeof(noun), stdin);
+    //enlever le \n de la fin
+    noun[strlen(noun) - 1] = '\0';
 
-    int a = 0;
-    float b=0.0f;
-    char c = '\0';
-    char d[30] = "";
+    printf("Enter a verb: ");
+    //scanf n'accepte pas les espaces
+    fgets(verb, sizeof(verb), stdin);
+    //enlever le \n de la fin
+    verb[strlen(verb) - 1] = '\0';
 
-    //On assigne une valeur à l'emplacement mémoire de a
-    printf("Entrez un entier: ");
-    scanf("%d", &a);
-    printf("Entrez un decimal: ");
-    scanf("%f", &b);
-    printf("Entrez une lettre: ");
-    // Ajouter un espace avant %c pour eviter de capturer le caractère de nouvelle ligne
-    scanf(" %c", &c);
+    printf("Enter an adjective: ");
+    //scanf n'accepte pas les espaces
+    fgets(adjective2, sizeof(adjective2), stdin);
+    //enlever le \n de la fin
+    adjective2[strlen(adjective2) - 1] = '\0';
+    
+    printf("Enter an adjective: ");
+    //scanf n'accepte pas les espaces
+    fgets(adjective3, sizeof(adjective3), stdin);
+    //enlever le \n de la fin
+    adjective3[strlen(adjective3) - 1] = '\0';
 
-    getchar(); // Pour clear le caractère de nouvelle ligne restant dans le buffer
-    printf("Entrez deux mots de (30 carac. max): ");
-    fgets(d, sizeof(d), stdin);
-    d[strlen(d) - 1] = '\0'; // Enlever le caractère de nouvelle ligne à la fin
-
-    printf("%s\n", d);
-    printf("%d\n", a);
-    printf("%.2f\n", b);
-    printf("%c\n", c);
+    printf("\nToday I went to a %s zoo.\n", adjective1);
+    printf("I saw a %s in its tree.\n", noun);
+    printf("%s was %s and %s!\n", noun, adjective2, verb);
+    printf("I was %s.\n", adjective3);
+    
 
     return 0;
 }
